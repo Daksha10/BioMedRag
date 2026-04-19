@@ -1,0 +1,209 @@
+{
+    "questions": [
+        {
+            "id": "q1",
+            "type": "summary",
+            "body": "What is the mechanism of action of penicillin on pneumococcal bacteria?",
+            "ideal_answer": "Penicillin inhibits cell wall synthesis in pneumococcal bacteria by triggering the bacterial autolytic enzyme. It inhibits the enzymes responsible for cross-linking the peptidoglycan cell wall, which in turn activates the pneumococcal autolysin. This leads to bacterial lysis in wild-type strains. In autolysin-deficient mutants, growth is inhibited without lysis, demonstrating that the autolytic enzyme is required for the bactericidal effect of penicillin.",
+            "documents": [
+                "https://pubmed.ncbi.nlm.nih.gov/piJYi50BUc5PnhkXO5oh/"
+            ]
+        },
+        {
+            "id": "q2",
+            "type": "yesno",
+            "body": "Do beta-adrenoreceptor blocking drugs have antihypertensive effects?",
+            "exact_answer": "yes",
+            "documents": [
+                "https://pubmed.ncbi.nlm.nih.gov/5aYjjJ0BRioLmPjLe6BP/"
+            ]
+        },
+        {
+            "id": "q3",
+            "type": "factoid",
+            "body": "What surface antigens do influenza viruses carry that are relevant to immunity?",
+            "ideal_answer": "Influenza viruses carry two major surface antigens: hemagglutinin (HA), which mediates binding to host cell receptors and is the primary target of neutralising antibodies, and neuraminidase (NA), an enzyme that facilitates viral release from infected cells. Antigenic variation in these two glycoproteins underlies influenza strain diversity and immune evasion.",
+            "documents": [
+                "https://pubmed.ncbi.nlm.nih.gov/cKYjjJ0BRioLmPjLfqmr/"
+            ]
+        },
+        {
+            "id": "q4",
+            "type": "yesno",
+            "body": "Is histocompatibility matching required for successful bone marrow transplantation?",
+            "exact_answer": "yes",
+            "documents": [
+                "https://pubmed.ncbi.nlm.nih.gov/0aYjjJ0BRioLmPjLe6BP/"
+            ]
+        },
+        {
+            "id": "q5",
+            "type": "list",
+            "body": "What beta-adrenoreceptor blocking drugs were studied for antihypertensive effects?",
+            "exact_answer": [
+                "propranolol",
+                "oxprenolol",
+                "pindolol",
+                "practolol",
+                "d-propranolol"
+            ],
+            "documents": [
+                "https://pubmed.ncbi.nlm.nih.gov/5aYjjJ0BRioLmPjLe6BP/"
+            ]
+        },
+        {
+            "id": "q6",
+            "type": "summary",
+            "body": "What is the role of glucagon in the pathogenesis of diabetes mellitus?",
+            "ideal_answer": "Glucagon plays an essential role in diabetes mellitus beyond simple insulin deficiency. Relative or absolute hyperglucagonaemia has been identified in every form of endogenous hyperglycaemia. Glucagon promotes hepatic glucose output and contributes to the hyperglycaemia seen in diabetes. Evidence suggests that diabetes may require both insulin deficiency and glucagon excess, as suppression of glucagon can normalise blood glucose even in the absence of adequate insulin.",
+            "documents": [
+                "https://pubmed.ncbi.nlm.nih.gov/GKYjjJ0BRioLmPjLfqgz/"
+            ]
+        },
+        {
+            "id": "q7",
+            "type": "yesno",
+            "body": "Does levamisole inhibit alkaline phosphatase isoenzymes?",
+            "exact_answer": "yes",
+            "documents": [
+                "https://pubmed.ncbi.nlm.nih.gov/aaYjjJ0BRioLmPjLe6BO/"
+            ]
+        },
+        {
+            "id": "q8",
+            "type": "factoid",
+            "body": "What characterises the tremor-at-rest seen in Parkinsonian patients?",
+            "ideal_answer": "The tremor-at-rest of Parkinsonian patients is characterised by a regular, alternating pattern of EMG activity in antagonistic muscles, with a typical frequency of approximately 4-6 Hz. It is present at rest and diminishes with voluntary movement. This contrasts with essential tremor, which is predominantly postural or action-related.",
+            "documents": [
+                "https://pubmed.ncbi.nlm.nih.gov/4aYjjJ0BRioLmPjLe6BP/"
+            ]
+        },
+        {
+            "id": "q9",
+            "type": "list",
+            "body": "What types of alkaline phosphatase isoenzymes were studied for kinetics and levamisole inhibition?",
+            "exact_answer": [
+                "liver isoenzyme",
+                "bone isoenzyme",
+                "intestinal isoenzyme",
+                "placental isoenzyme"
+            ],
+            "documents": [
+                "https://pubmed.ncbi.nlm.nih.gov/aaYjjJ0BRioLmPjLe6BO/"
+            ]
+        },
+        {
+            "id": "q10",
+            "type": "summary",
+            "body": "How are avian and equine influenza virus surface antigens related?",
+            "ideal_answer": "Equine influenza virus (A/equine/Prague/56) has a hemagglutinin that is antigenically related to the hemagglutinin of fowl plague virus (FPV), and a neuraminidase that cross-reacts with the neuraminidase of A/chick/Germany/49. These antigenic similarities suggest that equine and avian influenza viruses share common ancestral surface antigens, highlighting the cross-species antigenic relationships that are important for understanding influenza evolution and pandemic potential.",
+            "documents": [
+                "https://pubmed.ncbi.nlm.nih.gov/cKYjjJ0BRioLmPjLfqmr/"
+            ]
+        },
+        {
+            "id": "q11",
+            "type": "yesno",
+            "body": "Is glucagon excess involved in the pathogenesis of diabetes mellitus?",
+            "exact_answer": "yes",
+            "documents": [
+                "https://pubmed.ncbi.nlm.nih.gov/GKYjjJ0BRioLmPjLfqgz/"
+            ]
+        },
+        {
+            "id": "q12",
+            "type": "factoid",
+            "body": "What enzyme does penicillin trigger in pneumococcal bacteria to cause cell lysis?",
+            "ideal_answer": "Penicillin triggers the pneumococcal autolytic enzyme (autolysin) by inhibiting cell wall synthesis. This autolysin degrades the bacterial peptidoglycan, leading to cell lysis. Autolysin-deficient mutants are inhibited by penicillin but do not lyse, demonstrating the central role of this enzyme.",
+            "documents": [
+                "https://pubmed.ncbi.nlm.nih.gov/piJYi50BUc5PnhkXO5oh/"
+            ]
+        },
+        {
+            "id": "q13",
+            "type": "list",
+            "body": "What conditions are bone marrow transplantation used to treat?",
+            "exact_answer": [
+                "acute leukemia",
+                "aplastic anemia",
+                "severe combined immunodeficiency"
+            ],
+            "documents": [
+                "https://pubmed.ncbi.nlm.nih.gov/0aYjjJ0BRioLmPjLe6BP/"
+            ]
+        },
+        {
+            "id": "q14",
+            "type": "summary",
+            "body": "How do beta-adrenergic blocking drugs lower blood pressure in hypertensive patients?",
+            "ideal_answer": "Beta-adrenergic blocking drugs lower blood pressure in hypertensive patients primarily by blocking beta-1 adrenoreceptors in the heart, reducing heart rate and cardiac output. They also reduce renin release from the kidneys, lowering angiotensin II levels and thereby decreasing vascular resistance. Different beta-blockers vary in their cardioselectivity, intrinsic sympathomimetic activity, and potency, leading to differing antihypertensive profiles among agents such as propranolol, oxprenolol, pindolol, and practolol.",
+            "documents": [
+                "https://pubmed.ncbi.nlm.nih.gov/5aYjjJ0BRioLmPjLe6BP/"
+            ]
+        },
+        {
+            "id": "q15",
+            "type": "yesno",
+            "body": "Does penicillin inhibit cell wall synthesis in bacteria?",
+            "exact_answer": "yes",
+            "documents": [
+                "https://pubmed.ncbi.nlm.nih.gov/piJYi50BUc5PnhkXO5oh/"
+            ]
+        },
+        {
+            "id": "q16",
+            "type": "factoid",
+            "body": "What buffer was found superior to diethanolamine for measuring alkaline phosphatase isoenzyme activity?",
+            "ideal_answer": "N-Ethylaminoethanol was found to be superior to diethanolamine as a buffer for measuring alkaline phosphatase isoenzyme activity, particularly for the intestinal and placental isoenzymes, as it behaves as an activator rather than a substrate.",
+            "documents": [
+                "https://pubmed.ncbi.nlm.nih.gov/aaYjjJ0BRioLmPjLe6BO/"
+            ]
+        },
+        {
+            "id": "q17",
+            "type": "list",
+            "body": "What types of movement disorders were pharmacologically studied for differential diagnosis of tremor?",
+            "exact_answer": [
+                "Parkinsonian tremor",
+                "essential tremor",
+                "cerebellar tremor",
+                "physiological tremor"
+            ],
+            "documents": [
+                "https://pubmed.ncbi.nlm.nih.gov/4aYjjJ0BRioLmPjLe6BP/"
+            ]
+        },
+        {
+            "id": "q18",
+            "type": "summary",
+            "body": "What is the importance of HL-A typing and mixed lymphocyte culture reactivity in bone marrow transplantation?",
+            "ideal_answer": "HL-A typing (human leukocyte antigen typing) and mixed lymphocyte culture (MLC) reactivity are used to assess histocompatibility between donor and recipient before bone marrow transplantation. A compatible HL-A type is important to reduce graft-versus-host disease. MLC reactivity tests for functional T-cell incompatibility that may not be detected by serological HL-A typing alone. Both factors guide donor selection to improve engraftment success and reduce transplant-related complications.",
+            "documents": [
+                "https://pubmed.ncbi.nlm.nih.gov/0aYjjJ0BRioLmPjLe6BP/"
+            ]
+        },
+        {
+            "id": "q19",
+            "type": "yesno",
+            "body": "Are hemagglutinin and neuraminidase the main surface antigens of influenza viruses?",
+            "exact_answer": "yes",
+            "documents": [
+                "https://pubmed.ncbi.nlm.nih.gov/cKYjjJ0BRioLmPjLfqmr/"
+            ]
+        },
+        {
+            "id": "q20",
+            "type": "list",
+            "body": "What hormones are involved in glucose counterregulation in response to hypoglycaemia?",
+            "exact_answer": [
+                "glucagon",
+                "epinephrine",
+                "growth hormone",
+                "cortisol"
+            ],
+            "documents": [
+                "https://pubmed.ncbi.nlm.nih.gov/GKYjjJ0BRioLmPjLfqgz/"
+            ]
+        }
+    ]
+}
