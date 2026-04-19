@@ -3,6 +3,9 @@ import sys  # Import sys to manipulate the Python runtime environment
 import os  # Import os for file path and environment variable management
 import json  # Import json for handling structured data exchange
 import time  # Import time for tracking performance metrics
+import plotly.express as px  # Import Plotly Express for charts
+import plotly.graph_objects as go  # Import Plotly Graph Objects for custom charts
+import pandas as pd # Import Pandas for data handling
 
 # ── PAGE CONFIGURATION ────────────────────────────────────────────────────────
 # This must be the very first Streamlit call to configure browser tab metadata
@@ -428,3 +431,82 @@ if st.session_state.history:
   </div>
 </div>
 """, unsafe_allow_html=True)
+
+# ── SYSTEM INSIGHTS DASHBOARD (NEW) ───────────────────────────────────────────
+if st.session_state.history:
+    st.markdown("---")
+    st.markdown("### 📊 System Insights & Analytics")
+    
+    # Create tabs for different types of insights
+    tab1, tab2, tab3 = st.tabs(["🎯 Trust & Citations", "⏱ Performance Trends", "🔍 Topic Analysis"])
+    
+    with tab1:
+        # 1. Donut Chart for PMID Distribution of the LAST answer
+        last_entry = st.session_state.history[0]
+        used_pmids = last_entry["used_pmids"]
+        
+        if used_pmids:
+            # Create a simple distribution (each PMID is 1 unit)
+            df_pmid = pd.DataFrame({"PMID": [f"PMID {p}" for p in used_pmids], "Weight": [1]*len(used_pmids)})
+            fig_pmid = px.pie(df_pmid, values='Weight', names='PMID', hole=.4, 
+                             title="Source Contribution (Latest Answer)",
+                             color_discrete_sequence=px.colors.sequential.Greens_r)
+            fig_pmid.update_layout(template="plotly_dark", margin=dict(l=20, r=20, t=40, b=20))
+            st.plotly_chart(fig_pmid, use_container_width=True)
+        else:
+            st.info("No citations found in the latest answer to visualize.")
+
+    with tab2:
+        # 2. Line Chart for Latency Trends over the session
+        # history_df = pd.DataFrame(st.session_state.history[::-1]) # Chronological order
+        # history_df['Question #'] = range(1, len(history_df) + 1)
+        
+        # We manually build the dataframe to ensure types are correct
+        history_history = st.session_state.history[::-1]
+        latencies = {
+            'Question #': range(1, len(history_history) + 1),
+            'Retrieval Time': [e['ret_time'] for e in history_history],
+            'Generation Time': [e['gen_time'] for e in history_history]
+        }
+        df_lat = pd.DataFrame(latencies)
+        
+        fig_latency = go.Figure()
+        fig_latency.add_trace(go.Scatter(x=df_lat['Question #'], y=df_lat['Retrieval Time'], 
+                                        mode='lines+markers', name='Retrieval Time', line=dict(color='#58a6ff')))
+        fig_latency.add_trace(go.Scatter(x=df_lat['Question #'], y=df_lat['Generation Time'], 
+                                        mode='lines+markers', name='Generation Time', line=dict(color='#2ea043')))
+        
+        fig_latency.update_layout(title="Latency Trends (seconds)",
+                                 xaxis_title="Question Sequence",
+                                 yaxis_title="Time (s)",
+                                 template="plotly_dark",
+                                 margin=dict(l=20, r=20, t=40, b=20))
+        st.plotly_chart(fig_latency, use_container_width=True)
+
+    with tab3:
+        # 3. Topic Analysis (Basic keyword-based intent distribution)
+        keywords = ['symptoms', 'treatment', 'drug', 'side effects', 'protein', 'gene', 'disease', 'virus', 'clinical', 'trial']
+        topic_counts = {k: 0 for k in keywords}
+        topic_counts['other'] = 0
+        
+        for entry in st.session_state.history:
+            q_lower = entry['question'].lower()
+            matched = False
+            for k in keywords:
+                if k in q_lower:
+                    topic_counts[k] += 1
+                    matched = True
+            if not matched:
+                topic_counts['other'] += 1
+        
+        df_topics = pd.DataFrame({"Topic": list(topic_counts.keys()), "Count": list(topic_counts.values())})
+        df_topics = df_topics[df_topics['Count'] > 0].sort_values(by="Count", ascending=False)
+        
+        if not df_topics.empty:
+            fig_topics = px.bar(df_topics, x='Topic', y='Count', 
+                               title="Query Topic Distribution",
+                               color='Count', color_continuous_scale='Viridis')
+            fig_topics.update_layout(template="plotly_dark", margin=dict(l=20, r=20, t=40, b=20), xaxis_title="Common Topics")
+            st.plotly_chart(fig_topics, use_container_width=True)
+        else:
+            st.info("Ask more questions to see topic distribution analysis.")
