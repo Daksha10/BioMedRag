@@ -100,32 +100,8 @@ streamlit run streamlit_app.py
 
 ---
 
-## 📊 Evaluation & Data
+## Data
 
 - **Dataset**: We use a subset of **2.4M PubMed abstracts**.
-- **Embeddings**: Precomputed **MedCPT** vectors are used for semantic search.
-- **Benchmark**: The system's performance is validated using the `evaluation_pipeline.ipynb` located in the `evaluation/` directory.
 
 ---
-
-## 📄 Publications
-
-If you use this system in your research, please cite the original foundational work:
-
-```bibtex
-@INPROCEEDINGS{BioMedRag2025,
-  author={Stuhlmann, Linus and Saxer, Michael Alexander and Fürst, Jonathan},
-  booktitle={2025 IEEE Swiss Conference on Data Science (SDS)}, 
-  title={Efficient and Reproducible Biomedical Question Answering Using Retrieval Augmented Generation}, 
-  year={2025},
-  doi={10.1109/SDS66131.2025.00029}
-}
-```
-
----
-
-## 🛡️ License
-
-This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
-
-```
